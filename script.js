@@ -17,14 +17,17 @@ function generateRandomColor()
     var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
     return randomColor;
 }
+//Generate the color and change the gradient ot match for Color1
 function randomColor1() {
   color1.value = generateRandomColor()
   gradientChange()
 }
+//Generate color2 and change gradient
 function randomColor2(){
   color2.value = generateRandomColor()
   gradientChange()
 }
+
 function luckyDipFx(){
   randomColor1();
   randomColor2();
@@ -32,7 +35,6 @@ function luckyDipFx(){
 
 //Using an event listener of input to instantly record the change in the color picker
 //In this event listener the second parameter automatically gets run so there is no need to invoke the function with ()
-
 color1.addEventListener("input", gradientChange)
 //Same thing but with color2
 color2.addEventListener("input", gradientChange)
